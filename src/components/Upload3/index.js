@@ -16,6 +16,9 @@ const Upload3 = () => {
   const imgClick = (e) => {
     setImg(e.target.src);
   };
+  // Make something very big
+
+  // others
 
   const removeClick = () => {
     setImg(undefined);
