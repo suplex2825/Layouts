@@ -5,6 +5,7 @@ import Fashion from "../../img/fashion.png";
 import Cancel from "../../img/cancel.png";
 import RightPanel from "./RightPanel";
 import CommonStructure from "../../pages/CommonStructure";
+import SingleImage from "../SingleImage";
 import styles from "./index.module.css";
 
 const Index = () => {
@@ -20,7 +21,7 @@ const Index = () => {
   const ImageComponents = () => {
     return (
       <div className={styles.galleryWrap}>
-        <div className={styles.singleItem}>
+        {/* <div className={styles.singleItem}>
           <img
             src={Fashion}
             alt="fashion"
@@ -28,12 +29,19 @@ const Index = () => {
             onClick={imgClick}
           />
           <img src={Cancel} alt="Cancel" className={styles.cancelImg} />
-        </div>
+        </div> */}
+        <SingleImage img={Fashion} imgClick={imgClick} />
       </div>
     );
   };
 
-  return <CommonStructure ImageComponents={ImageComponents} />;
+  return (
+    <CommonStructure
+      ImageComponents={ImageComponents}
+      img={img}
+      removeClick={removeClick}
+    />
+  );
   return (
     <div className={styles.upload1Container}>
       <div className={styles.leftPanel}>

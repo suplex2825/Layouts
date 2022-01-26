@@ -1,0 +1,17 @@
+.responsiveImg {
+  width: 100%;
+  height: auto;
+}
+
+.cancelImg {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  cursor: pointer;
+}
+
+.singleItem {
+  position: relative;
+}

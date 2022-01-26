@@ -2,7 +2,7 @@ import styles from "./index.module.css";
 import Upload from "../../img/Upload.png";
 import Close from "../../img/close2.png";
 
-const CommonStructure = ({ ImageComponents }) => {
+const CommonStructure = ({ ImageComponents, img, removeClick }) => {
   return (
     <div className={styles.upload1Container}>
       <div className={styles.leftPanel}>
@@ -11,15 +11,26 @@ const CommonStructure = ({ ImageComponents }) => {
           Search and discover similar items by uploading or taking a photo.
         </p>
         <div className={styles.uploadImg}>
-          <div className={styles.imgWrapper}>
-            <img src={Upload} alt="upload" className={styles.img} />
-          </div>
-          <p className={styles.uploadTitle} style={{ marginBottom: "0" }}>
-            Drop your image here or
-          </p>
-          <a className={styles.uploadLink} href="/#">
-            browse
-          </a>
+          {img === undefined ? (
+            <>
+              <div className={styles.imgWrapper}>
+                <img src={Upload} alt="upload" className={styles.img} />
+              </div>
+              <p className={styles.uploadTitle} style={{ marginBottom: "0" }}>
+                Drop your image here or
+              </p>
+              <a className={styles.uploadLink} href="/#">
+                browse
+              </a>
+            </>
+          ) : (
+            <img
+              src={img}
+              alt="fashion"
+              className={styles.imgClass}
+              onClick={removeClick}
+            />
+          )}
         </div>
       </div>
       <div className={styles.rightPanel}>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Upload from "../../img/Upload.png";
 import Close from "../../img/close2.png";
 import Fashion from "../../img/fashion.png";
@@ -11,39 +11,83 @@ import Cancel from "../../img/cancel.png";
 import CommonStructure from "../../pages/CommonStructure";
 import styles from "./index.module.css";
 
-const index = () => {
+const Upload3 = () => {
+  const [img, setImg] = useState(undefined);
+  const imgClick = (e) => {
+    setImg(e.target.src);
+  };
+
+  const removeClick = () => {
+    setImg(undefined);
+  };
   const ImageComponents = () => {
     return (
       <div className={styles.galleryWrap}>
         <div className={styles.singleItem}>
-          <img src={Fashion} alt="fashion" className={styles.responsiveImg} />
+          <img
+            src={Fashion}
+            alt="fashion"
+            className={styles.responsiveImg}
+            onClick={imgClick}
+          />
           <img src={Cancel} alt="Cancel" className={styles.cancelImg} />
         </div>
         <div className={styles.singleItem}>
-          <img src={Fashion2} alt="fashion" className={styles.responsiveImg} />
+          <img
+            src={Fashion2}
+            alt="fashion"
+            className={styles.responsiveImg}
+            onClick={imgClick}
+          />
           <img src={Cancel} alt="Cancel" className={styles.cancelImg} />
         </div>
         <div className={styles.singleItem}>
-          <img src={Fashion3} alt="fashion" className={styles.responsiveImg} />
+          <img
+            src={Fashion3}
+            alt="fashion"
+            className={styles.responsiveImg}
+            onClick={imgClick}
+          />
           <img src={Cancel} alt="Cancel" className={styles.cancelImg} />
         </div>
         <div className={styles.singleItem}>
-          <img src={Fashion4} alt="fashion" className={styles.responsiveImg} />
+          <img
+            src={Fashion4}
+            alt="fashion"
+            className={styles.responsiveImg}
+            onClick={imgClick}
+          />
           <img src={Cancel} alt="Cancel" className={styles.cancelImg} />
         </div>
         <div className={styles.singleItem}>
-          <img src={Fashion5} alt="fashion" className={styles.responsiveImg} />
+          <img
+            src={Fashion5}
+            alt="fashion"
+            className={styles.responsiveImg}
+            onClick={imgClick}
+          />
           <img src={Cancel} alt="Cancel" className={styles.cancelImg} />
         </div>
         <div className={styles.singleItem}>
-          <img src={Fashion6} alt="fashion" className={styles.responsiveImg} />
+          <img
+            src={Fashion6}
+            alt="fashion"
+            className={styles.responsiveImg}
+            onClick={imgClick}
+          />
           <img src={Cancel} alt="Cancel" className={styles.cancelImg} />
         </div>
       </div>
     );
   };
 
-  return <CommonStructure ImageComponents={ImageComponents} />;
+  return (
+    <CommonStructure
+      ImageComponents={ImageComponents}
+      img={img}
+      removeClick={removeClick}
+    />
+  );
 };
 
-export default index;
+export default Upload3;
