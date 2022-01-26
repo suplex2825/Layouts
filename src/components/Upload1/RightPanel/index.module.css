@@ -1,0 +1,59 @@
+.rightPanel {
+  width: 50%;
+  background-color: #1a2737;
+  border-radius: 0px 4px 4px 0px;
+}
+
+.closeWrap {
+  text-align: right;
+  margin-right: 16px;
+  margin-top: 16px;
+  cursor: pointer;
+}
+
+.closeIcon {
+  width: 14px;
+  height: 14px;
+}
+
+.rightTitle {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.015em;
+  font-weight: bold;
+  color: #fff;
+  margin-left: 40px;
+}
+
+.galleryWrap {
+  margin-top: 24px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 92px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.responsiveImg {
+  width: 100%;
+  height: auto;
+}
+
+.cancelImg {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  cursor: pointer;
+}
+
+.singleItem {
+  position: relative;
+}
+
+.imgClass {
+  width: 100%;
+  height: 280px;
+}

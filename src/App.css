@@ -1,0 +1,203 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e3e3e3 !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.header a {
+  margin: 5px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+    "header main main main main widget"
+    "header main main main main widget"
+    "header main main main main widget"
+    "header main main main main widget"
+    "header main main main main widget"
+    "header footer footer footer footer widget";
+  grid-template-rows: repeat(6, 1fr);
+  height: calc(100vh - 42px - 20px);
+}
+
+.grid-container > div {
+  font-size: 30px;
+  padding: 20px 0;
+  color: #fff;
+}
+
+.site-header {
+  background-color: aqua;
+  grid-area: header;
+}
+
+.site-main {
+  background-color: green;
+  grid-area: main;
+}
+
+.widget-area {
+  background-color: purple;
+  grid-area: widget;
+}
+
+.site-footer {
+  background-color: blue;
+  grid-area: footer;
+}
+
+.layout2-grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  grid-template-areas:
+    "layout2-header layout2-header layout2-header layout2-header layout2-header layout2-header"
+    ". layout2-main layout2-main layout2-main layout2-sidebar ."
+    ". layout2-main layout2-main layout2-main layout2-sidebar ."
+    ". layout2-main layout2-main layout2-main layout2-sidebar ."
+    ". layout2-twin1 layout2-twin1 layout2-twin2 layout2-twin2 ."
+    ". layout2-twin1 layout2-twin1 layout2-twin2 layout2-twin2 ."
+    "layout2-footer layout2-footer layout2-footer layout2-footer layout2-footer layout2-footer";
+  grid-gap: 5px;
+}
+
+.layout2-grid-container > div {
+  font-size: 30px;
+  padding: 20px 0;
+  color: #fff;
+}
+
+.layout2-header {
+  background-color: aqua;
+  grid-area: layout2-header;
+}
+
+.layout2-main-content {
+  background-color: green;
+  grid-area: layout2-main;
+}
+
+.layout2-sidebar {
+  background-color: purple;
+  grid-area: layout2-sidebar;
+}
+
+.layout2-twin1 {
+  background-color: orange;
+  grid-area: layout2-twin1;
+}
+
+.layout2-twin2 {
+  background-color: orange;
+  grid-area: layout2-twin2;
+}
+
+.layout2-footer {
+  background-color: blue;
+  grid-area: layout2-footer;
+}
+
+.layout3-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(7, 1fr);
+  grid-template-areas:
+    "view-a view-a view-a view-a view-a view-a view-a view-a  view-h"
+    "view-b view-b view-b view-c view-c view-c view-d view-d  view-h"
+    "view-b view-b view-b view-c view-c view-c view-d view-d  view-h"
+    "view-e view-e view-f view-f view-f view-f view-d view-d  view-h"
+    "view-e view-e view-f view-f view-f view-f view-d view-d  view-h"
+    "view-e view-e view-f view-f view-f view-f view-g view-g  view-h"
+    "view-e view-e view-f view-f view-f view-f view-g view-g  view-h";
+}
+
+.layout3-grid-container > div {
+  font-size: 30px;
+  padding: 20px 0;
+}
+
+.view-a {
+  background-color: green;
+  grid-area: view-a;
+}
+
+.view-b {
+  background-color: yellow;
+  grid-area: view-b;
+}
+
+.view-c {
+  background-color: #6495ed;
+  grid-area: view-c;
+}
+
+.view-d {
+  background-color: #9932cc;
+  grid-area: view-d;
+}
+
+.view-e {
+  background-color: #00bfff;
+  grid-area: view-e;
+}
+
+.view-f {
+  background-color: orange;
+  grid-area: view-f;
+}
+
+.view-g {
+  background-color: #8fbc8f;
+  grid-area: view-g;
+}
+
+.view-h {
+  background-color: #9400d3;
+  grid-area: view-h;
+}
+
+@media (max-width: 600px) {
+  .layout2-grid-container {
+    grid-template-areas:
+      "layout2-header layout2-header layout2-header layout2-header layout2-header layout2-header"
+      "layout2-main layout2-main layout2-main layout2-main layout2-sidebar layout2-sidebar"
+      "layout2-main layout2-main layout2-main layout2-main layout2-sidebar layout2-sidebar"
+      "layout2-main layout2-main layout2-main layout2-main layout2-sidebar layout2-sidebar"
+      "layout2-twin1 layout2-twin1 layout2-twin1 layout2-twin2 layout2-twin2 layout2-twin2"
+      "layout2-twin1 layout2-twin1 layout2-twin1 layout2-twin2 layout2-twin2 layout2-twin2"
+      "layout2-footer layout2-footer layout2-footer layout2-footer layout2-footer layout2-footer";
+  }
+}
+
+.boxWrapper {
+  display: flex;
+  overflow-x: scroll;
+}
+
+.box {
+  min-width: 300px;
+  height: 200px;
+  background: blue;
+  margin-right: 20px;
+}
+
+.red-box {
+  background: red;
+  width: 20px;
+  height: 20px;
+  position: fixed;
+  top: 23%;
+  left: 0;
+}

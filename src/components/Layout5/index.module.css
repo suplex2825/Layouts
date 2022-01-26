@@ -1,0 +1,88 @@
+.container {
+  width: 939px;
+  height: 553px;
+  background-color: #fff;
+  border-radius: 4px;
+  margin: 0 auto;
+  filter: drop-shadow(0px 0px 10px rgba(51, 77, 110, 0.2));
+  display: flex;
+}
+
+.leftPanel {
+  width: 30%;
+  border-right: 1px solid #d6dbe2;
+}
+
+.rightPanel {
+  width: 70%;
+  overflow: auto;
+}
+
+.title {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: bold;
+  letter-spacing: 0.015em;
+  color: #334d6e;
+  text-align: center;
+  font-style: normal;
+  margin-top: 38px;
+}
+
+.img {
+  margin-top: 16px;
+  margin-left: 24px;
+  margin-right: 23px;
+}
+
+.innerImage {
+  width: 100%;
+  height: auto;
+}
+
+.chooseButton {
+  background-color: #fff;
+  border: 1px solid #24364d;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 50px;
+  margin-right: 50px;
+  width: 124px;
+  height: 36px;
+}
+
+.buttonWrapper {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.innerContainer {
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.closeWrap {
+  text-align: right;
+  margin-top: 16px;
+}
+
+.close {
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+
+.text {
+  font-size: 12px;
+  line-height: 18px;
+  color: #5c718b;
+  margin-top: 17px;
+  text-align: right;
+}
+
+.imgSection {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
